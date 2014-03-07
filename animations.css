@@ -1,0 +1,189 @@
+@charset "UTF-8";
+/* CSS Document */
+html, body
+{
+	font-family: 'Russo One', sans-serif;
+	margin: 0;
+	padding-left:75px;
+	color: #999;
+	text-align:center;
+}
+a:link    { color:#FFF;}
+a:visited {color:#FFF;}
+a:hover   { color:#333;}
+a:active  {color:#FFF;}
+title
+{
+	left:125px;
+}
+
+.test 
+{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	background-color: black;
+	-moz-transition-property: *;
+	-moz-transition-duration: 1000s;
+}
+.playground 
+{
+	float: left;
+	position: relative;
+	width: 200px;
+	height: 200px;
+	margin: 50px;
+	border: 2px solid #A8C2D2;
+ }
+.subject 
+{
+	position: absolute;
+	background-color:#58FAF4;
+	/*background-color: rgba(0, 0, 0, 0.3);*/
+	top: 0px;
+	left: 0px;
+	width: 50px;
+	height: 50px;
+	opacity: 0.7;
+	border-radius: 25px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	opacity: 0;
+}
+.baton
+{
+	position:absolute;
+	width:4px;
+	height:80px;
+	top:121px;
+	left:147px;
+	background-color: #966;
+	z-index:0;
+}
+.test1
+{
+	/*background-image: url(../../../../../../Library/WebServer/Documents/mobile/ANIMATION/SkyProject/images/square.jpg);*/
+	background-image:url(images/square.jpg);
+}
+.test3
+{
+	/*background-image: url(../../../../../../Library/WebServer/Documents/mobile/ANIMATION/SkyProject/images/bokeh_texture.jpg);*/
+	background-image:url(images/bokeh_texture.jpg);
+}
+.test4
+{
+	/*background-image:url(../../../../../../Library/WebServer/Documents/mobile/ANIMATION/SkyProject/images/nainBG.jpg);*/
+	background-image:url(images/nainBG.jpg);
+}
+.vestibule
+{
+	position:absolute;
+	top:3;
+	left:0;
+	width:95px;
+	height:14px;
+	padding:5px;
+	background-color:#999;
+}
+#test1 
+{
+	width:91px;
+	height:91px;
+	background-color: #666;
+}
+#BGtest2
+{
+	top:0;
+	left:0;
+	width:200px;
+	height:200px;
+	/*background-image: url(../../../../../../Library/WebServer/Documents/mobile/ANIMATION/SkyProject/images/tallin_square.jpg);*/
+	background-image:url(images/tallin_square.jpg);
+	overflow:hidden;
+}	
+#test2
+{
+	top:0;
+	left:0;
+	width:200px;
+	height:200px;
+	/*background-image: url(../../../../../../Library/WebServer/Documents/mobile/ANIMATION/SkyProject/images/chatNoir.png);*/
+	background-image:url(images/chatNoir.png);
+	background-color:transparent;
+	opacity:0;
+}
+#test4
+{
+	top: 75px;
+	left: 100px;
+	/*background-image:url(../../../../../../Library/WebServer/Documents/mobile/ANIMATION/SkyProject/images/windmill.png);*/
+	background-image:url(images/windmill.png);
+	background-color: transparent;
+	z-index:1000;
+	
+}
+blockquote 
+{
+	position: relative;
+	display: none;
+	opacity: 0;
+	padding: 0;
+	background: rgba(0, 0, 0, 0.9);
+	color: rgb(255, 255, 255);
+	margin: 0;
+	margin-top:-2px;
+	width:200px;
+	height:198px;
+	/*min-width: 200px;
+	max-width: 400px;*/
+	z-index:1010;
+}
+
+
+#scene {
+	width: 200px;
+	height: 200px;
+	float:left;
+	background: 
+		 url(images/cloud1.png) repeat-x,
+		 url(images/cloud2.png) repeat-x,
+		 url(images/sky1.jpg);
+}
+
+@-webkit-keyframes scene2 {
+	0% { background-position: 0px 0, 0px 0, 0 0; }
+	100% { background-position: 1200px 0, 600px 0, 0 0; }
+}
+@-moz-keyframes scene2 {
+	0% { background-position: 0px 0, 0px 0, 0 0; }
+	100% { background-position: 1200px 0, 600px 0, 0 0; }
+}
+@-o-keyframes scene2 {
+	0% { background-position: 0px 0, 0px 0, 0 0; }
+	100% { background-position: 1200px 0, 600px 0, 0 0; }
+}
+@-ms-keyframes scene2 {
+	0% { background-position: 0px 0, 0px 0, 0 0; }
+	100% { background-position: 1200px 0, 600px 0, 0 0; }
+}
+@keyframes scene2 {
+	0% { background-position: 0px 0, 0px 0, 0 0; }
+	100% { background-position: 1200px 0, 600px 0, 0 0; }
+}
+
+.scene2 {
+	width: 250px;
+	height: 250px;
+	
+	background: 
+	    url(images/cloud3.png),
+		url(images/cloud1.png) repeat-x,
+		url(images/sky1.jpg);
+	-webkit-animation: scene2 85s linear infinite ;
+	-moz-animation: scene2 85s linear infinite ;
+	-o-animation: scene2 85s linear infinite ;
+	-ms-animation: scene2 85s linear infinite ;
+	animation: scene2 85s linear infinite ;
+}
+
+
