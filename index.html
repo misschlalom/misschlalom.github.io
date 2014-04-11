@@ -21,14 +21,15 @@
 		return false;
 	  }
 	}
+	var open = false ;
 </script>
 <title>Testing Animations</title>
 
 </head>
 
 <body>
-<!--NEED THIS AND THE JANIS FILES-->
- <script type="text/javascript" src="janis.js"></script>
+<!--NEED THIS AND THE JANIS FILE-->
+ <script type="text/javascript" src="janis.min.js"></script>
  
  <a href="https://github.com/misschlalom/misschlalom.github.io"><div class="vestibule">GITHUB for the code</div></a>
 <div><h1>Light animations for any devices include mobile...</h1></div> 
@@ -158,6 +159,134 @@
 <!--CLOUDY SKY -->
     <div class="playground">
         	<div id="scene" class="scene2"></div>
+    </div>
+  <!--Animated Buttons-->
+    <div class="playground">
+    		
+             <div>
+                    <div class="animateCoverBTN" id="cover0regis">
+                    			<div class="underBTN">NOW !</div>
+                    </div>
+            </div>
+            <div class="animateBTN" id="cover0">Register !</div>
+            
+            <div>
+                    <div class="animateCoverBTN" id="cover1regis">
+                    			<div class="underBTN">REALLY</div>
+                    </div>
+            </div>
+            <div class="animateBTN" id="cover1">Live  !</div>
+            
+            <div>
+                    <div class="animateCoverBTN" id="cover2regis">
+                    			<div class="underBTN">YOU?</div>
+                    </div>
+            </div>
+            <div class="animateBTN" id="cover2">Can</div>
+            
+            <div>
+                    <div class="animateCoverBTN" id="cover3regis">
+                    			<div class="underBTN"> I T </div>
+                    </div>
+            </div>
+            <div class="animateBTN" id="cover3">Do</div>
+           
+            <script>
+					var left = "109px";
+					var right = "167px";
+					var duration = 600;
+					var easing = "ease";
+					var nbBtn = 4;
+					var regis;
+					var regisArray = new Array(); 
+					
+					
+					function overOnOut(e)
+					{
+						var theOne = e.currentTarget.id;
+						//alert('THE ONE = ' + theOne);
+						switch(theOne)
+						{
+							case"cover0":
+											  var w0 = (document.getElementById("cover0regis").style.left == left? right: left);
+											  Janis("#cover0regis").chain().animate({
+													"left" : w0,
+													"duration": duration, 
+													"easing": easing
+												}).execute();
+												break;
+												
+							case"cover1":
+											   var w1 = (document.getElementById("cover1regis").style.left == left? right: left);
+											  Janis("#cover1regis").chain().animate({
+													"left" : w1,
+													"duration": duration, 
+													"easing": easing
+												}).execute();
+												break;
+												
+							case"cover2":
+												var w2 = (document.getElementById("cover2regis").style.left == left? right: left);
+											  Janis("#cover2regis").chain().animate({
+													"left" : w2,
+													"duration": duration, 
+													"easing": easing
+												}).execute();
+												break;
+							
+							case"cover3":
+											var w3 = (document.getElementById("cover3regis").style.left == left? right: left);
+											  Janis("#cover3regis").chain().animate({
+													"left" : w3,
+													"duration": duration, 
+													"easing": easing
+												}).execute();
+												break;
+						}
+					}
+					function onOver(e)
+					{
+							Janis("#"+e.currentTarget.id+"regis").chain().animate({
+										"left" : right,
+										"duration": duration,
+										"easing": easing
+									}).execute();
+					}
+					function onOut(e)
+					{
+							Janis("#"+e.currentTarget.id+"regis").chain().animate({
+										"left" : left,
+										"duration": duration,
+										"easing": easing
+									}).execute();
+					}
+					for ( var i=0; i<nbBtn; i++)
+					{
+									
+									regis = {element : document.getElementById("cover"+i),
+									selected : false, id:i}
+									
+									 var initLeft = regis.element.id+"regis";
+									 var ginette= document.getElementById(initLeft).style.left = "109px";
+									regisArray.push(regis);
+									
+									if(detectmob()==false)
+									{
+										
+										regis.element.addEventListener("mouseover", onOver);
+										regis.element.addEventListener("mouseout", onOut);
+									
+									}
+									else
+									{
+										
+										regis.element.addEventListener("touchstart", overOnOut);
+										//regis.addEventListener("touchstart", onOut);
+									}
+					}
+				
+			</script>
+           
     </div>
 </body>
 </html>
